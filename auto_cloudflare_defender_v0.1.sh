@@ -28,7 +28,7 @@ output="1"
 email="눈_눈"
 # CloudFlare 账号邮箱
 
-global_api_key="눈_눈"
+api_key="눈_눈"
 # CloudFlare API KEY 使用Global API即可
 
 zone_id="눈_눈"
@@ -228,9 +228,6 @@ do
             do
               # 删除冲突的匹配条件
               result1=$(curl -X DELETE "$api_url2/$i" \
-                -H "X-Auth-Email: $email" \
-                -H "X-Auth-Key: $api_key" \
-                -H "Content-Type: appl$api_url2/$i" \
                 -H "X-Auth-Email: $email" \
                 -H "X-Auth-Key: $api_key" \
                 -H "Content-Type: application/json" --silent)
